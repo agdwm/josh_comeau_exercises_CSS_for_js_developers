@@ -1,0 +1,69 @@
+.grid {
+  --header-height: 5rem;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 14rem 1fr;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* To create a stacking context of the parent
+  to make sure that any z-index I set are not going 
+  to bleed through and effect any other element on the page */
+  isolation: isolate;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  place-content: center;
+  height: var(--header-height);
+  border-bottom: 3px solid;
+  background-color: white;
+  /* To sticky header */
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+/* Sticky positioning doesn't care about grid tracks and lines,
+as far as sticky positioning is concerned, an element is contained by its DOM parent */
+aside {
+  grid-area: sidebar;
+  position: relative;
+  z-index: 1;
+}
+
+/* We can't tell the sticky position rendering algorithm to notice a grid line. 
+We can work around this by creating a DOM node that uses the CSS Grid rules
+that itself contains the sticky child. */
+.sticky-sidebar {
+  position: sticky;
+  top: var(--header-height);
+}
+
+main {
+  grid-area: main;
+  /*
+    Add a bunch of height, to simulate it
+    being full of content
+  */
+  min-height: 180vh;
+  border: 3px solid;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  place-content: center;
+  height: 5rem;
+  border-top: 3px solid;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
