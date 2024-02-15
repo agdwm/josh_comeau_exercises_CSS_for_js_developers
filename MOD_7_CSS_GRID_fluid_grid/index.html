@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fluid grid with CSS Grid</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      /* let's implement the World-Famous Grid Snippet from scratch,
+      without using Media Queries*/
+      .grid {
+        --min-column-width: min(320px, 100%);
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(var(--min-column-width), 1fr)
+        );
+        gap: 16px;
+        padding: 16px;
+      }
+    </style>
+
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+  </body>
+</html>
