@@ -1,0 +1,9 @@
+.image-list img {
+  height: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
