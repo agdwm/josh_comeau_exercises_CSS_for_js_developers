@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation slide-in from bottom</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!--
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation slide-in from bottom</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    @keyframes slide-in {
+      from {
+        transform: translateY(calc(100% + var(--spacing)));
+      }
+
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+    .help-circle {
+      --spacing: 32px;
+      position: fixed;
+      bottom: var(--spacing);
+      right: var(--spacing);
+      animation: slide-in 500ms backwards;
+      animation-delay: 1000ms;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
       Acceptance criteria:
 
       • Should have a 1000ms delay
@@ -16,35 +39,10 @@
         bottom-right corner
     -->
 
-    <style>
-      @keyframes slide-in {
-        from {
-          transform: translateY(0);
-        }
-        to {
-          transform: translateY(calc(-100% - 30px));
-          opacity: 1;
-        }
-      }
+  <button class="help-circle">
+    <img alt="" src="https://courses.joshwcomeau.com/cfj-mats/help-white.svg" />
+    <span class="visually-hidden"> Access help center </span>
+  </button>
+</body>
 
-      .help-circle {
-        opacity: 0;
-        position: fixed;
-        right: 32px;
-        top: 100%;
-        animation-delay: 1000ms;
-        animation: slide-in 1000ms;
-        animation-timing-function: ease-out;
-        animation-iteration-count: infinite;
-      }
-    </style>
-
-    <button class="help-circle">
-      <img
-        alt=""
-        src="https://courses.joshwcomeau.com/cfj-mats/help-white.svg"
-      />
-      <span class="visually-hidden"> Access help center </span>
-    </button>
-  </body>
 </html>
