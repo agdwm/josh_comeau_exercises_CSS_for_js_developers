@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pushable button animation</title>
+  <style>
+    /* People use borders or box-shadows. These implementations are fine for static buttons, but if we want to animate it, we'll have a much smoother effect if we stick with transforms. */
+    .front {
+      transform: translateY(-4px);
+      transition: transform 500ms;
+    }
+
+    .pushable:hover .front {
+      transform: translateY(-6px);
+      transition: transform 250ms;
+    }
+
+    .pushable:active .front {
+      transform: translateY(-2px);
+      transition: transform 50ms;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="pushable">
+    <span class="front">
+      Push me
+    </span>
+  </button>
+</body>
+
+</html>
