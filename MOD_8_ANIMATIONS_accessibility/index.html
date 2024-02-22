@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes slide-in {
+      from {
+        transform: translateY(calc(100% + var(--spacing)));
+      }
+
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .help-circle {
+      --spacing: 32px;
+      position: fixed;
+      bottom: var(--spacing);
+      right: var(--spacing);
+      /* ALTERNATIVE ANIMATION for users who have selected 'reduce motion' in their operating system.*/
+      animation: fade-in 500ms backwards;
+      animation-delay: 1000ms;
+    }
+
+
+    @media (prefers-reduced-motion: no-preference) {
+      .help-circle {
+        /* ORIGINAL ANIMATION for user who prefer animations */
+        animation-name: slide-in;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="help-circle">
+    <img alt="" src="https://courses.joshwcomeau.com/cfj-mats/help-white.svg" />
+    <span class="visually-hidden"> Access help center </span>
+  </button>
+</body>
+
+</html>
