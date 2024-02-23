@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object fit</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Crop it the image in mobile resolutions */
+    img {
+      width: 100%;
+      min-height: calc(150 / 16 * 1rem);
+      object-fit: cover;
+      object-position: left center;
+    }
+  </style>
+</head>
+
+<body>
+  <img alt="" src="./assets/swoops.svg" />
+</body>
+
+</html>
