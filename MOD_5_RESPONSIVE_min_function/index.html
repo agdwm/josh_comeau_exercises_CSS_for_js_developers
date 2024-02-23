@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+</head>
+
+<body>
+  <style>
+    .hero {
+      /*
+        Constraints:
+          1.- A default height of 80vh
+          2.- A max height of 500px
+          3.- If the content doesn't fit, the hero should grow to prevent an overflow
+        */
+      min-height: min(80vh, 500px);
+      /* <= SOLUTION */
+      background: url("./assets/night-sky.jpg");
+      background-size: cover;
+      background-position: bottom center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-shadow: 0px 0.3em 1em hsl(295deg 100% 10%);
+    }
+
+    .max-width-wrapper {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    main {
+      padding: 64px 0;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      background: black;
+      color: white;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+
+  <div class="hero">
+    <h1>Words and Things</h1>
+    <h2 class="subhead">A collection of letters and symbols.</h2>
+  </div>
+  <main>
+    <div class="max-width-wrapper">
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but
+        the majority have suffered alteration in some form, by injected
+        humour, or randomised words which don't look even slightly believable.
+      </p>
+      <p>
+        If you are going to use a passage of Lorem Ipsum, you need to be sure
+        there isn't anything embarrassing hidden in the middle of text.
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>
