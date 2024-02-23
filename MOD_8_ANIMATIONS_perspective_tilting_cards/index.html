@@ -4,24 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Transforms - Perspective - Tilting cards</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Tilting cards animation without doom flicker effect</title>
   <style>
+    /* 1. Shared parent */
     .wrapper {
-      transform-style: preserve-3d;
       perspective: 500px;
+      transform-style: preserve-3d;
     }
 
+    /* 2. Individual card wrapper */
     .card-link {
       display: block;
+    }
+
+    /* 3. Child to be transformed: */
+    .card {
       transform-origin: top center;
       will-change: transform;
       transform: rotateX(0deg);
       transition: transform 750ms;
     }
 
-    .card-link:hover,
-    .card-link:focus {
+    /*
+      Apply the transforms to the child
+      when we hover/focus the wrapper:
+    */
+    .card-link:hover .card,
+    .card-link:focus .card {
       transform: rotateX(-35deg);
       transition: transform 250ms;
     }
@@ -29,33 +38,36 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <a href="/" class="card-link">
-      <article class="card">
-        <img src="https://courses.joshwcomeau.com/images/logos/chrome.svg" />
-      </article>
-    </a>
-    <a href="/" class="card-link">
-      <article class="card">
-        <img src="https://courses.joshwcomeau.com/images/logos/firefox.svg" />
-      </article>
-    </a>
-    <a href="/" class="card-link">
-      <article class="card">
-        <img src="https://courses.joshwcomeau.com/images/logos/safari.png" />
-      </article>
-    </a>
-    <a href="/" class="card-link">
-      <article class="card">
-        <img src="https://courses.joshwcomeau.com/images/logos/edge.svg" />
-      </article>
-    </a>
-    <a href="/" class="card-link">
-      <article class="card">
-        <img src="https://courses.joshwcomeau.com/images/logos/opera.svg" />
-      </article>
-    </a>
-  </div>
+
 </body>
 
 </html>
+
+
+<div class="wrapper">
+  <a href="/" class="card-link">
+    <article class="card">
+      <img src="https://courses.joshwcomeau.com/images/logos/chrome.svg" />
+    </article>
+  </a>
+  <a href="/" class="card-link">
+    <article class="card">
+      <img src="https://courses.joshwcomeau.com/images/logos/firefox.svg" />
+    </article>
+  </a>
+  <a href="/" class="card-link">
+    <article class="card">
+      <img src="https://courses.joshwcomeau.com/images/logos/safari.png" />
+    </article>
+  </a>
+  <a href="/" class="card-link">
+    <article class="card">
+      <img src="https://courses.joshwcomeau.com/images/logos/edge.svg" />
+    </article>
+  </a>
+  <a href="/" class="card-link">
+    <article class="card">
+      <img src="https://courses.joshwcomeau.com/images/logos/opera.svg" />
+    </article>
+  </a>
+</div>

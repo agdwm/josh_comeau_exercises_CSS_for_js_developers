@@ -1,5 +1,5 @@
 body {
-  background-color: hsl(240deg 80% 90%);
+  background-color: hsl(240deg 80% 90%)
 }
 .wrapper {
   display: grid;
@@ -21,11 +21,6 @@ body {
   width: 64px;
   height: 64px;
 }
-/*
-  The default focus style looks bad with the
-  transform. Let's remove it, and apply a
-  better one!
-*/
 .card-link:focus {
   outline: none;
 }
