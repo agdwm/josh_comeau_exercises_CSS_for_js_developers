@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+}
+body {
+  padding: 0;
+  display: grid;
+  place-content: center;
+}
+
+.wrapper {
+  /* Using the nested radius trick discussed earlier! */
+  --radius: 16px;
+  --padding: 8px;
+  background-color: hsl(230deg 80% 90%);
+  padding: var(--padding);
+  border-radius: var(--radius);
+}
+.box {
+  width: 200px;
+  max-width: 90vw;
+  border-radius: calc(var(--radius) - var(--padding));
+  background: white;
+  padding: 16px 20px;
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+}

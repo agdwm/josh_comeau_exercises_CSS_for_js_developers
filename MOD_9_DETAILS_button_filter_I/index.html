@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button hover effect with filter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <style>
+    .btn {
+      background: linear-gradient(to top,
+          hsl(260deg 80% 40%),
+          hsl(260deg 80% 50%));
+      transition: filter 600ms;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transition: filter 250ms;
+      /* The effect is similar to animating background-color, but more flexible, since it works with gradients and background images as well. */
+      filter: brightness(150%);
+    }
+  </style>
+
+  <button class="btn">
+    Push me
+  </button>
+</body>
+
+</html>

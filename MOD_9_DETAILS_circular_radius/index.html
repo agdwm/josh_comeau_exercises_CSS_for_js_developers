@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circular radius and scalable</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      /* Yowza! There's a hacky-yet-simple fix for this—pick a very very large number: */
+      /* border-radius: 5000px; */
+      /* Another option */
+      /* By setting the corner radius to 100% of the viewport’s largest size, we guarantee that it'll be bigger than the element could be, as long as the element is smaller than the viewport itself. */
+      border-radius: 100vmax;
+    }
+  </style>
+</head>
+
+<body>
+  <article class="card"></article>
+</body>
+
+</html>

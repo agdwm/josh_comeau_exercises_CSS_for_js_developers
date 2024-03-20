@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested radiuses known outer radius</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      --outer-radius: 24px;
+      --padding: 8px;
+
+      border-radius: var(--outer-radius);
+      padding: var(--padding);
+    }
+
+    .avatar {
+      border-radius: calc(var(--outer-radius) - var(--padding));
+    }
+  </style>
+</head>
+
+<body>
+  <article class="card">
+    <img class="avatar" alt="Dog avatar" src="./article-image-spot.jpg" />
+    <h2>Spot</h2>
+    <p>Perennial Good Boy. Parlimentary candidate, district 22. Dog park YIMBY.</p>
+  </article>
+</body>
+
+</html>

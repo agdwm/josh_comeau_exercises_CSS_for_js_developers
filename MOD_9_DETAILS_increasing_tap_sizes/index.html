@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increasing tap sizes to improve mobile ux experience</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .click-target-helper::after {
+      --click-target-minimum: 44px;
+      --inset-by: min(0px,
+          calc((100% - var(--click-target-minimum)) / 2));
+      content: "";
+      position: absolute;
+      top: var(--inset-by);
+      left: var(--inset-by);
+      right: var(--inset-by);
+      bottom: var(--inset-by);
+    }
+
+    /*
+      Highlight the pseudoelement to
+      reveal the tap target size.
+    */
+    .click-target-helper::after {
+      outline: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button class="click-target-helper short">
+      This Is A Button
+    </button>
+    <button class="click-target-helper tall">
+      Button
+    </button>
+    <button class="click-target-helper short">
+      B
+    </button>
+    <button class="click-target-helper tall">
+      B
+    </button>
+    <a class="click-target-helper" href="#">hi</a>
+  </div>
+</body>
+
+</html>

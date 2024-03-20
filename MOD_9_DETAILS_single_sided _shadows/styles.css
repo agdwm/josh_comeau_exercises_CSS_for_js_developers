@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: grid;
+  place-content: center;
+  padding: 0;
+  background-color: hsl(230deg 80% 90%);
+}
+
+.box {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 8px;
+  background: white;
+  padding: 16px 20px;
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+}

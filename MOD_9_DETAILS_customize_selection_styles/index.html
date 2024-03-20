@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize selection styles</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    ::selection {
+      color: var(--selection-color);
+      background-color:
+        var(--selection-background);
+    }
+
+    html {
+      /*
+      NOTE: Selection styles aren't inheritable, but there's a pretty slick workaround, using CSS VARIABLES. */
+      /*
+        Define global defaults
+        for selection colors…
+      */
+      --selection-color:
+        hsl(25deg 100% 20%);
+      --selection-background:
+        hsl(55deg 100% 60%);
+    }
+
+    figure {
+      /*
+        …But then override those values
+        for specific parts of the page!
+      */
+      --selection-color: hsl(0deg 0% 0%);
+      --selection-background:
+        hsl(333deg 100% 50%);
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Lorem Ipsum is simply
+    <em>dummy text of the printing and typesetting industry</em>.
+    Lorem Ipsum has been the industry's standard dummy text ever
+    since the 1500s, when an unknown printer took a galley of type
+    and scrambled it to make a type specimen book.
+  </p>
+
+  <figure>
+    <img alt="Handsome-looking dog" src="article-image-spot.jpg" />
+    <figcaption>
+      Try selecting this text! The styles are different
+    </figcaption>
+  </figure>
+</body>
+
+</html>

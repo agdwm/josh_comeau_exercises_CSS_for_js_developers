@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal knob using conic-gradient</title>
+  <style>
+    .knob {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid hsl(0deg 0% 60%);
+      background-image: conic-gradient(hsl(0deg 0% 90%),
+          hsl(0deg 0% 100%),
+          hsl(0deg 0% 30%),
+          hsl(0deg 0% 80%),
+          hsl(0deg 0% 50%),
+          hsl(0deg 0% 90%),
+          hsl(0deg 0% 100%),
+          hsl(0deg 0% 30%),
+          hsl(0deg 0% 80%),
+          hsl(0deg 0% 50%),
+          hsl(0deg 0% 90%));
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="knob"></div>
+</body>
+
+</html>

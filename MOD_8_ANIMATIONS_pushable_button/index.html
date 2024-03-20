@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pushable Button animation</title>
+  <title>Inc</title>
   <style>
     /* People use borders or box-shadows. These implementations are fine for static buttons, but if we want to animate it, we'll have a much smoother effect if we stick with transforms.
     From this article -> https://www.joshwcomeau.com/animation/3d-button/ */
@@ -16,6 +16,9 @@
       cursor: pointer;
       outline-offset: 4px;
       transition: filter 250ms;
+      /* The following two declarations enhance the mobile UX experience. */
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
     }
 
     .shadow {

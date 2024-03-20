@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: var(--blue-bg);
+}
+.background {
+  flex: 1;
+  flex-basis: 50%;
+  height: 400px;
+}

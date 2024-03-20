@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designing shadows</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    1. Creating a cohesive environment by coordinating our shadows.
+    2. Using layering to create more-realistic shadows.
+    3. Tweaking the colors to prevent “washed-out” gray shadows.
+  -->
+  <style>
+    .first.box {
+      width: 50px;
+      height: 50px;
+      box-shadow:
+        0.5px 1px 1px hsl(220deg 60% 50% / 0.7);
+    }
+
+    .second.box {
+      width: 100px;
+      height: 100px;
+      box-shadow:
+        1px 2px 2px hsl(220deg 60% 50% / 0.333),
+        2px 4px 4px hsl(220deg 60% 50% / 0.333),
+        3px 6px 6px hsl(220deg 60% 50% / 0.333);
+    }
+
+    .third.box {
+      width: 150px;
+      height: 150px;
+      box-shadow:
+        1px 2px 2px hsl(220deg 60% 50% / 0.2),
+        2px 4px 4px hsl(220deg 60% 50% / 0.2),
+        4px 8px 8px hsl(220deg 60% 50% / 0.2),
+        8px 16px 16px hsl(220deg 60% 50% / 0.2),
+        16px 32px 32px hsl(220deg 60% 50% / 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="wrapper">
+    <div class="first box"></div>
+    <div class="second box"></div>
+    <div class="third box"></div>
+  </section>
+</body>
+
+</html>

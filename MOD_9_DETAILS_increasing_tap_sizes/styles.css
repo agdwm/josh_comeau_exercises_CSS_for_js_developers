@@ -1,0 +1,25 @@
+.click-target-helper {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  cursor: pointer;
+}
+button.tall {
+  height: 60px;
+}
+button.short {
+  height: 32px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+}

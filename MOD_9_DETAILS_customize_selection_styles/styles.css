@@ -1,0 +1,21 @@
+p {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+figure {
+  margin: 0;
+  width: min-content;
+  padding: 16px;
+  color: white;
+  background: hsl(333deg 25% 15%);
+}
+figure img {
+  display: block;
+  max-width: 175px;
+  margin-bottom: 8px;
+}
+figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+}

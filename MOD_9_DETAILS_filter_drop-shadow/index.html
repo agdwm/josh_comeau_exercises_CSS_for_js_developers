@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter drop-shadow</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      /* When we apply filter: drop-shadow to an element, it contours that element and all of its descendants */
+      filter: drop-shadow(2px 4px 8px hsl(0deg 0% 0% / 0.4));
+    }
+  </style>
+</head>
+
+<body>
+  <article class="card">
+    <h2>Hi!</h2>
+    <div class="decoration one"></div>
+    <div class="decoration two"></div>
+  </article>
+</body>
+
+</html>

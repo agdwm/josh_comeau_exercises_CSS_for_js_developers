@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested radiuses with known inner radius</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card {
+      /* If we KNOW THE INNER RADIUS and need to calculate the correct outer radius.
+      In this case is 24px (16px inner radius + 8px padding) */
+      /* ⚠️ Try changing these numbers! */
+      --inner-radius: 16px;
+      --padding: 8px;
+
+      border-radius: calc(var(--inner-radius) + var(--padding));
+      padding: var(--padding);
+    }
+
+    .avatar {
+      border-radius: var(--inner-radius);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <article class="card">
+    <img class="avatar" alt="Dog avatar" src="./article-image-spot.jpg" />
+    <h2>Spot</h2>
+    <p>Perennial Good Boy. Parlimentary candidate, district 22. Dog park YIMBY.</p>
+  </article>
+</body>
+
+</html>

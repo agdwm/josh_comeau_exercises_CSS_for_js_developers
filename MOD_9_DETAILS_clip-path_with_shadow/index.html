@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clip-path with shadows</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* To apply shadows to a clipped shapes we need to add the shadow to a PARENT element */
+    .wrapper {
+      filter: drop-shadow(1px 2px 4px hsl(0deg 0% 0% / 0.5));
+    }
+
+    .triangle {
+      clip-path: polygon(0% 100%,
+          50% 0%,
+          100% 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="triangle"></div>
+  </div>
+</body>
+
+</html>

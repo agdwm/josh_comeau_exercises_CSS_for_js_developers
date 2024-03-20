@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trophy display with conic gradient</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      --dark-gold: hsl(34deg 90% 45%);
+      --gold: hsl(44deg 80% 70%);
+      --light-gold: hsl(44deg 100% 85%);
+    }
+
+    .wrapper {
+      position: relative;
+      height: 325px;
+      max-width: 550px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      background-color: var(--gold);
+      border-radius: 100vmax 100vmax 10vmax 10vmax;
+      background-image: conic-gradient(from 90deg at 50% 100%,
+          var(--dark-gold) 50%,
+          var(--gold) 62.5%,
+          var(--light-gold) 75%,
+          var(--gold) 87.5%,
+          var(--dark-gold) 100%)
+    }
+
+    .trophy {
+      transform-origin: center bottom;
+      transform: scale(1.4) translateY(16px);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <img class="trophy" alt="gold trophy" src="gold-trophy.png" />
+  </div>
+</body>
+
+</html>

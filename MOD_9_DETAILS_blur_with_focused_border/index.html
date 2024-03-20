@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blur effect with focused border</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    a {
+      /* Crop the blurred edge */
+      overflow: hidden;
+      /*
+          Move the border-radius up,
+          to preserve the sharp corner
+          as well
+        */
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="/">
+    <img alt="A colourful busy street in Tokyo, Japan" src="https://courses.joshwcomeau.com/cfj-mats/akihabara.jpg" />
+  </a>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inset shadow with box-shadow</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .wrapper {
+      --shadow: 2px 2px 8px hsl(0deg 0% 0% / 0.33);
+      box-shadow: inset var(--shadow);
+      /*
+     The '.box' has a non-inset shadow.
+     We don't want it to bleed beyond
+     its wrapper.
+    */
+      overflow: hidden;
+    }
+
+    .box {
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box">
+      Moat!
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+body {
+  background-color: hsl(210deg 15% 6%);
+}
+.card {
+  width: min-content;
+  background: white;
+  text-align: center;
+}
+.avatar {
+  display: block;
+  width: 250px;
+}
+.card p {
+  padding: 4px;
+}
