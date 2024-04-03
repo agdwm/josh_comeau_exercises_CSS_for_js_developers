@@ -1,0 +1,26 @@
+.floated {
+  --breathing-room: 16px;
+  float: left;
+  shape-outside:
+    url('https://courses.joshwcomeau.com/cfj-mats/me-light.png');
+  margin-right: var(--breathing-room);
+  shape-margin: var(--breathing-room);
+  width: 125px;
+}
+
+/* Cosmetic styles */
+.wrapper {
+  max-width: 600px;
+  padding: 32px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  max-width: 50%;
+}
+body {
+  padding: 16px;
+}
+p {
+  text-align: justify;
+  hyphens: auto;
+}

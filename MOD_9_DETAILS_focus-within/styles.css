@@ -1,0 +1,30 @@
+body {
+  background-color: hsl(210deg, 55%, 92%);
+}
+
+form {
+  background-color: white;
+  padding: 32px;
+  border-radius: 8px;
+  width: min-content;
+  margin: 2rem auto;
+}
+.row {
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+input {
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+button {
+  display: block;
+  width: 50%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 32px auto 0;
+  font-size: 1rem;
+}
